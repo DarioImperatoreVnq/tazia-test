@@ -21,7 +21,7 @@ jobs:
         run: mvn clean install
 
       - name: Upload JAR files
-        run: 
+        run: | 
           mkdir -p jars
           cp it/ovunque/tazia/*.jar jars/
       - name: Deploy to GitHub Packages
