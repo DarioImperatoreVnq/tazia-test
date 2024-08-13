@@ -20,6 +20,11 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
+      - name: Upload JAR files
+        run: 
+          mkdir -p jars
+          cp it/ovunque/tazia/*.jar ./ 
+
       - name: Deploy to GitHub Packages
         run: mvn deploy
         env: 
